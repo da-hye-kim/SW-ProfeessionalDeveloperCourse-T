@@ -241,6 +241,55 @@
   /* 1200px 미만 ~ 768px : 태블릿 T, M */
   /* 768px 미만 : 모바일 M, S */
 @media screen and (max-width : 1200px) {
+    .background {
+        height: 400;
+    }
+
+    .main-title {
+        font-size: 44px;
+    }
+
+    .post-card {
+        display: block;
+        width: 90%; 
+        margin: 0 auto;
+        margin-top: 30px;    
+    }
+    
+    .post-card > div {
+        width: 80%;
+        max-width: 600px;
+        margin: 30px auto;
+    }
+
+    .post-card > div:first-child {
+        margin-top: 0;
+    }
+
+    .post-card > div:last-child {
+        margin-bottom: 0;
+    }
+
+    .fixed-back {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .bgc-box {
+        width: 100%;
+        /* transparent : 투명이라는 뜻 */
+        background-color: transparent;
+    }
+    
+    .fixed-back-img {
+        background-position: bottom center;
+        margin-right: 0;
+    }
+    
+    .fixed-back-img2 {
+        display: none;
+    }
 
 }
 
