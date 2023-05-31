@@ -92,38 +92,57 @@ header nav {
 }
 
 .post-card {
-  position: relative;
-  top: -50px;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  margin-bottom: 30px;
+  /* position: relative;
+  top: -50px; */
 }
 
 .post-card > div {
   width: 80%;
   /* 최대폭을 결정하는 속성 : 600px 이상은 커지지 말아라 */
-  max-width: 600px;
+  max-width: 300px;
   /* 최소폭을 결정하는 속성 : 300px 이하로는 작아지지 말아라 */
-  min-width: 300px;
+  min-width: 200px;
   /* 양 옆 = auto / top : 30px / bottom : 0 */
   margin: 30px auto 0 auto;
-  padding: 30px;
+  padding: 40px 30px;
   border-radius: 10px;
   text-align: center;
   background-color: rgb(217, 241, 254);
 }
 
-.post-card > div:first-child {
+/* .post-card > div:first-child {
   margin-top: 0;
-}
+} */
 
 .fixed-back {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   height: 600px;
   background-color: rgb(217, 241, 254);
+
 }
 
-.fixed-back-img {
-  width: 1000px;
+.fixed-back-img1 {
+  width: 600px;
+  height: 500px;
+  background-color: #fff;
+  background-image: url('../images/pngegg.png');
+  background-repeat: no-repeat;
+  background-size: 500px;
+  /* px, %, top, bottom, left, right */
+  /* px, % 사용 시 왼쪽 상단을 기준으로 거리 기재 */
+  /* x, y (가로 X 세로) 모두 center일 때는 center 한 번만 써도 된다. */
+  background-position: center bottom;
+  background-attachment: fixed;
+}
+
+.fixed-back-img2 {
+  width: 600px;
   height: 500px;
   background-color: #fff;
   background-image: url('../images/pngegg.png');
@@ -213,3 +232,19 @@ footer {
   color: dodgerblue;
   text-decoration: underline;
 }
+
+
+
+/* 권장 breakpoint */
+  /* 1200px / 992px / 768px / 576px */
+  /* Bootstrap 라이브러리가 권장하는 breakpoint */
+  /* 1200px 이상 : Desktop D, L */
+  /* 1200px 미만 ~ 768px : 태블릿 T, M */
+  /* 768px 미만 : 모바일 M, S */
+  @media screen and (max-width : 1200px) {
+
+  }
+  
+  @media screen and (max-width : 768px) {
+
+  }
