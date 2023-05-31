@@ -1,0 +1,102 @@
+.box {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    animation-name: move2;
+    /* animation 재생될 시간 */
+    animation-duration: 2s;
+    /* infiniti : 무한반복이고 숫자를 5로 지정해주면 5번동안 반복됨 */
+    animation-iteration-count: infinite;
+    /* animation 재생 설정(앞으로만 이동, 뒤로 이동, 번갈아 재생) 
+    - nomal : 앞으로 재생
+    - alternate : 앞 뒤 재생
+    - reverse : 뒤로 재생
+    - alternate-reverse : 뒤 앞 재생
+    */
+    animation-direction: alternate;
+}
+
+@keyframes move {
+    0% {
+        left: 0;
+    }
+
+    25% {
+        background-color: blue;
+        left: 100px;
+    }
+
+    50% {
+        background-color: aqua;
+        left: 200px;
+    }
+
+    75% {
+        background-color: bisque;
+        left: 300px;
+    }
+
+    100% {
+        background-color: blueviolet;
+        left: 400px;
+    }
+}
+
+@keyframes move2 {
+    from {
+        background-color: violet;
+        left: 0;
+    }
+
+    to {
+        background-color: bisque;
+        left: 300px;
+        transform: scale(1.2);
+    }
+}
+
+.line-active {
+    position: relative;
+}
+
+.line {
+    position: absolute;
+    /* span 태그는 인라인 속성이라 블록 처럼 지정값을 가지려면 css에 display: inline-block;을 해줘야함 */
+    display: inline-block;
+    width: 30px;
+    height: 3px;
+    animation-name: linemove;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.line-active span:first-child {
+    top: 0;
+    background-color: red;
+    box-shadow: 0 0 2px 1px red;
+}
+
+/* width 사이즈 확인용 */
+/* .line-active h2 {
+    display: inline-block;
+} */
+
+.line-active span:last-child {
+    bottom: 0;
+    background-color: blue;
+    box-shadow: 0 0 2px 1px blue;
+    /* 엇갈리게 하기 위해 0.5초 있다가 출발하라는 뜻 */
+    animation-delay: 0.5s;
+}
+
+@keyframes linemove {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: 173px;
+    }
+}
