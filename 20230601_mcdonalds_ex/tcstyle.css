@@ -216,7 +216,16 @@ footer {
   margin-right: 10px;
   background-color: #fff;
   border-radius: 50%;
+  transition: background-color 300ms ease-in-out;
 }
+
+.mac-icon-list li:hover {
+    background-color: rgb(235, 27, 27);
+  }
+
+  .mac-icon-list li:hover i {
+    color: #fff;
+  }
 
 .mac-icon-list li:last-child {
   margin-right: 0;
@@ -229,4 +238,7 @@ footer {
   transform: translate(-50%, -50%);
   font-size: 26px;
   color: rgb(235, 27, 27);
+  transition: color 300ms ease-in-out;
 }
+
+
