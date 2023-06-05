@@ -393,8 +393,9 @@ footer {
   /* overlay 2가지 방법 있음 */
   .overlay {
     position: fixed;
-    /* top, left, bottom, right 좌표를 
-      네 꼭지점에서 서로 잡아당기기
+    /* top,left,bottom,right 좌표를 다 0으로 줄 경우, 
+      네 꼭지점에서 서로 잡아당기기 때문에 쫙 펴져서
+      width : 100%, height: 100%와 동일한 효과를 줄 수 있다.
     */
     top: 0;
     left: 0;
