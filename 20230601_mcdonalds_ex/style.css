@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  /* 웹 접근성을 높이기 위해 사용 (스크린 리더기) */
+  .visually-hidden {
+    display: none;
+  }
+  
+  header {
+    height: 90px;
+    background-color: #fff;
+  }
+  
+  header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* position : fixed를 주면 width값이 본인이 가진 콘텐츠 만큼 줄어든다. */
+    /* position: fixed; */
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    height: 80px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+  }
+  
+  .logo img {
+    width: 80px;
+  }
+  
+  .gnb-list {
+    display: flex;
+  }
+  
+  .gnb-item a {
+    padding: 20px;
+    transition: color 500ms;
+    font-weight: 700;
+    font-size: 17px;
+    color: #000;
+  }
+  
+  .gnb-item a:hover {
+    color: rgb(235, 27, 27);
+  }
+
+
+  footer {
+    padding: 20px 0;
+    background-color: rgb(235, 27, 27);
+    height: 100px;
+  }
+  
+  .global-footer {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .foot-info {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+  }
+
+.gnb-footer-list li {
+    margin-top: 8px;
+}
+
+.gnb-footer-list li:first-child {
+    margin-top: 0;
+}
+
+.gnb-footer-item a {
+    color: #fff;
+}
+
+.icon-list {
+    display: flex;
+}
+
+.icon-item {
+    background-color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.icon-item a {
+    color: rgb(235, 27, 27);
+    font-size: 27px;
+}
+
+main {
+    border-top: 2px solid rgb(255, 213, 23);
+    width: 100%;
+}
+
+.main-section nav {
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    background-color: rgb(235, 27, 27);
+}
+
+.main-gnb-list {
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.main-gnb-item {
+    margin-left: 20px;
+}
+
+.main-gnb-item a {
+    color: #fff;
+}
+
+.gnb-footer-item a:hover {
+  color: rgb(255, 213, 23);
+}
+
+.back-img {
+    background-image: url(./images/back.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+}
+
+.set1 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+
+.set1-item {
+  width: 320px;
+  height: 370px;
+  box-shadow: 1px 1px 10px 1px gray;
+  border-radius: 10px;
+  margin-right: 30px;
+}
+
+.set1-back {
+  background-image: url(./images/food.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+}
+
+.set1-txt {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.f-bar {
+  width: 100%;
+  height: 150px;
+  border-top: 2px solid rgb(255, 213, 23);
+  background-color: #fff;
+}
+
+.f-img-box {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.f-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
