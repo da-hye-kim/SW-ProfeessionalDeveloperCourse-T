@@ -220,12 +220,12 @@ footer {
 }
 
 .mac-icon-list li:hover {
-    background-color: rgb(235, 27, 27);
-  }
+  background-color: rgb(235, 27, 27);
+}
 
-  .mac-icon-list li:hover i {
-    color: #fff;
-  }
+.mac-icon-list li:hover i {
+  color: #fff;
+}
 
 .mac-icon-list li:last-child {
   margin-right: 0;
@@ -241,15 +241,15 @@ footer {
   transition: color 300ms ease-in-out;
 }
 
-@media screen and (max-width : 1200px) {
+@media screen and (max-width: 1200px) {
   nav {
     padding: 5px 0;
   }
-  
+
   .logo img {
     width: 60px;
   }
-  
+
   .gnb-list {
     width: 250px;
   }
@@ -265,12 +265,12 @@ footer {
   .food-box-item {
     width: 33%;
   }
-  
+
   .food-box-item img {
     width: 100%;
     height: 150px;
   }
-  
+
   .food-box-txt {
     margin: 20px auto;
   }
@@ -279,13 +279,143 @@ footer {
     margin-top: 50px;
     padding: 10px 0;
   }
-  
+
   .mac-story-list {
     width: 40%;
   }
-  
+
   .mac-story-item img {
     width: 80px;
     height: 80px;
   }
+}
+
+@media screen and (max-width: 768px) {
+  .sm-only {
+    display: block;
+  }
+
+  .sm-hidden {
+    display: none;
+  }
+
+  .logo img {
+    width: 50px;
+  }
+
+  .gnb-icon-btn i {
+    font-size: 24px;
+  }
+
+  .background {
+    height: 300px;
+  }
+
+  .food-box {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .food-box-list {
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  .food-box-item {
+    width: 90%;
+    margin: 20px auto 0 auto;
+  }
+
+  .food-box-item:first-child {
+    margin-top: 0;
+  }
+
+  .food-box-item:last-child {
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+
+  .mac-story-box {
+    margin-top: 30px;
+  }
+
+  .mac-story-list {
+    width: 50%;
+  }
+
+  .mac-story-item img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .global-footer {
+    flex-wrap: wrap;
+  }
+  
+  .mac-link-list {
+    margin-right: 0;
+  }
+  
+  .mac-info-list {
+    text-align: right;
+  }
+  
+  .mac-icon-list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .mac-icon-list li {
+    width: 40px;
+    height: 40px;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    width: 200px;
+    height: 100vh;
+    padding: 32px 20px;
+    background-color: #fff;
+    transform: translateX(-200px);
+  }
+
+  .side-menu-item a {
+    display: block;
+    padding: 10px;
+    color: #3f4150;
+  }
+
+  /* overlay 2가지 방법 있음 */
+  .overlay {
+    position: fixed;
+    /* top, left, bottom, right 좌표를 
+      네 꼭지점에서 서로 잡아당기기
+    */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+    /* display : none transition이 먹지 않는다. */
+    /* UI Animation 효과를 주고 싶갇면 visibility를 사용해야 한다. */
+    visibility: hidden;
+    background-color: rgba(63, 65, 80, 0.5);
+  }
+
+  /* .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(63, 65, 80, 0.5);
+  } */
+
+
 }
