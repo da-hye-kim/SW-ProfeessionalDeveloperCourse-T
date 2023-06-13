@@ -1,0 +1,64 @@
+<!-- <!DOCTYPE html> -> html5를 사용하겠다는 뜻 프로그램 언어이기 떼문에 5버전이라고 하긴 그렇고 언어의 협의를 5번 한것? -->
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="김다혜">
+    <meta name="keywords" content="CSS의 가상 요소를 이용하여 반복적으로 나타나는 가상의 요소를 만들 수 있다.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가상 요소 (Pseido-elements)</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div id="box1">
+        Hello World! Hello World! Hello World! Hello World!
+    </div>
+
+    <!-- p태그는 paragraph의 줄임말 block 요소-->
+    <p class="apple">안녕하세요.</p>
+    <p class="apple">반갑습니다.</p>
+    <p class="apple">Hello world!</p>
+
+    <table id="bill">
+        <tr>
+            <th>품목</th>
+            <th>단가</th>
+        </tr>
+        <tr>
+            <td>공책</td>
+            <td>200,000</td>
+        </tr>
+        <tr>
+            <td>볼펜</td>
+            <td>150,000</td>
+        </tr>
+        <tr>
+            <td>만년필</td>
+            <td>250,000</td>
+        </tr>
+    </table>
+
+    <div id="modal">
+        <div id="modalwin">
+            <button id="modalcl" type="button"></button>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis dignissimos sunt culpa pariatur aliquid a numquam, similique voluptates odit vero repudiandae consectetur, sed mollitia ut perspiciatis molestias sint vitae. Rem?</p>
+        </div>
+    </div>
+
+    <script>
+        // 목표 : x자 버튼을 눌렀을 때 모달이 사라졌으면 좋겠다.
+        // 1. #modalcl이 클릭 당했을 때
+        // 2. #modal의 style 중 display라는 스타일의 값을 none으로 바꾼다.
+
+        document.getElementById("modalcl").onclick = function(){
+            document.getElementById("modal").style.display = "none";
+        };
+        
+        // $("modalcl").click(function(){
+        //     $("modal").hide();
+        // });
+    </script>
+
+</body>
+</html>

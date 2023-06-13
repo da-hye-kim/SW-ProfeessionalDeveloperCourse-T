@@ -1,0 +1,119 @@
+#box1 { 
+    width: 20%;
+    height: 1em;
+    background-color: yellow;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* 가상요소는 닫을 태그가 있는 경우에만 쓸 수 있음 */
+.apple::after {
+    content: "다람쥐";
+    color: red;
+}
+
+.apple::before {
+    content: "ㅎㅎㅎ";
+    display: block;
+    background-color: red;
+    width: 200px;
+    height: 50px;
+}
+
+#bill {
+    border: 1px solid #000;
+    /* border-spacing: 10px; */
+    /* collapse 뜻 보더안애 있는 간격 없애기 */
+    border-collapse: collapse;
+}
+
+#bill td, th { 
+    border: 1px solid #000;
+    /* em 단위 : 기준 사이즈가 1em = 100% */
+    padding: 0.3em 1em;
+}
+
+#bill th {
+    background-color: #eee;
+}
+
+/*
+    아이디가 bill인 녀석의 자손 중에서 각각 둘째인 녀석들의 뒷부분
+*/
+#bill td:nth-of-type(2)::after {
+    content: "원";
+    margin-left: 0.3em;
+    font-size: 0.8em;
+    color: #555;
+}
+
+#modal {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 9999;
+}
+
+#modalwin {
+    background-color: #fff;
+    /* width: calc(100% - 20px); : 양옆 마진에 10px 이 포함된 100% 넓이임 */
+    width: calc(100% - 20px);
+    max-width: 450px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+    box-shadow: 3px 8px 12px rgba(0,0,0,0.2);
+}
+
+#modalcl {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+
+#modalcl::before, #modalcl::after {
+    content: "";
+    display: block;
+    width: 35px;
+    height: 2px;
+    background-color: red;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transition: all 0.4s;
+}
+
+#modalcl::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+#modalcl::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/*
+    #madalcl에 마우수를 올렸을 때 그녀석의 before와 after
+*/
+#modalcl:hover::before {
+    transform: translate(-50%, -50%) rotate(0deg);
+    margin-top: -5px;
+    width: 20px;
+    height: 5px;
+}
+
+#modalcl:hover::after {
+    transform: translate(-50%, -50%) rotate(0deg);
+    margin-top: 5px;
+    width: 20px;
+    height: 5px;
+}
